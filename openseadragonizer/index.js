@@ -39,7 +39,9 @@
     };
 
     document.getElementById("show-button").onclick = function () {
-        location.href = '?img=' + urlElt.value;
+        var decodedImageUrl=encodeURIComponent(urlElt.value);
+        console.log(decodedImageUrl);
+        location.href = '?img=' + decodedImageUrl;
     };
 
     init();
